@@ -74,6 +74,8 @@
 		70F82CEB29CC21B40072B334 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 70F82CEA29CC21B40072B334 /* CodeScanner */; };
 		70F82CED29CD75BB0072B334 /* MGQRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F82CEC29CD75BB0072B334 /* MGQRCodeScannerView.swift */; };
 		70F82CEE29CD7E3D0072B334 /* MGRouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F82CE329CC10070072B334 /* MGRouteModel.swift */; };
+		D0F4AEDF2A10DE7000830371 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0F4AEE12A10DE7000830371 /* Localizable.strings */; };
+		D0F4AEE42A10E0DD00830371 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F4AEE32A10E0DD00830371 /* Localizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +187,9 @@
 		70F82CE529CC10220072B334 /* MGRouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRouteViewModel.swift; sourceTree = "<group>"; };
 		70F82CE729CC10390072B334 /* MGRouteSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGRouteSettingView.swift; sourceTree = "<group>"; };
 		70F82CEC29CD75BB0072B334 /* MGQRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGQRCodeScannerView.swift; sourceTree = "<group>"; };
+		D0F4AEE02A10DE7000830371 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D0F4AEE22A10DE7500830371 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D0F4AEE32A10E0DD00830371 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +323,7 @@
 		70C9ED9729501D5B00B6995B /* Mango */ = {
 			isa = PBXGroup;
 			children = (
+				D0F4AEDC2A10DE3300830371 /* Localization */,
 				70C9EDBF2950303900B6995B /* Mango.entitlements */,
 				70B947B229613354006F6A38 /* MGAppDelegate.swift */,
 				70DE0D6729A6114B00B3E343 /* MGApp.swift */,
@@ -424,6 +430,15 @@
 			path = DNS;
 			sourceTree = "<group>";
 		};
+		D0F4AEDC2A10DE3300830371 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				D0F4AEE12A10DE7000830371 /* Localizable.strings */,
+				D0F4AEE32A10E0DD00830371 /* Localizable.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -492,10 +507,12 @@
 			};
 			buildConfigurationList = 70C9ED9029501D5B00B6995B /* Build configuration list for PBXProject "Mango" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = "zh-Hans";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				"zh-Hans",
+				en,
+				Base,
 			);
 			mainGroup = 70C9ED8C29501D5B00B6995B;
 			packageReferences = (
@@ -526,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70C9EDA029501D5C00B6995B /* Preview Assets.xcassets in Resources */,
+				D0F4AEDF2A10DE7000830371 /* Localizable.strings in Resources */,
 				70C9ED9D29501D5C00B6995B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +619,7 @@
 				70DE0D7029A62A5800B3E343 /* MGPacketTunnelManager.swift in Sources */,
 				70B89C3A29C1AB18003DA577 /* MGNetworkSettingView.swift in Sources */,
 				70F82CED29CD75BB0072B334 /* MGQRCodeScannerView.swift in Sources */,
+				D0F4AEE42A10E0DD00830371 /* Localizable.swift in Sources */,
 				708B380829B0AA6200E24312 /* MGAssetSettingView.swift in Sources */,
 				70B89C1B29C17C06003DA577 /* MGSniffingViewModel.swift in Sources */,
 			);
@@ -616,12 +635,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		D0F4AEE12A10DE7000830371 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0F4AEE02A10DE7000830371 /* en */,
+				D0F4AEE22A10DE7500830371 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		702D909B299FA40600B83324 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XrayTunnel/XrayTunnel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A9CLYY495;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XrayTunnel/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = XrayTunnel;
@@ -648,6 +680,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XrayTunnel/XrayTunnel.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4A9CLYY495;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = XrayTunnel/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = XrayTunnel;
@@ -794,11 +827,13 @@
 				CODE_SIGN_ENTITLEMENTS = Mango/Mango.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Mango/Preview Content\"";
+				DEVELOPMENT_TEAM = 4A9CLYY495;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mango/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Mango;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "扫描分享的二维码";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -827,11 +862,13 @@
 				CODE_SIGN_ENTITLEMENTS = Mango/Mango.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Mango/Preview Content\"";
+				DEVELOPMENT_TEAM = 4A9CLYY495;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mango/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Mango;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "扫描分享的二维码";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -16,19 +16,19 @@ extension MGConfiguration {
         init(urlString: String) throws {
             guard let components = Foundation.URLComponents(string: urlString),
                   let protocolType = components.scheme.flatMap(MGConfiguration.ProtocolType.init(rawValue:)) else {
-                throw NSError.newError("协议链接解析失败")
+                throw NSError.newError(Localized.protocolParseFaild)
             }
             guard protocolType == .vless || protocolType == .vmess else {
-                throw NSError.newError("暂不支持\(protocolType.description)协议解析")
+                throw NSError.newError("\(Localized.notSupported) \(protocolType.description) \(Localized.protocolAnalysis))")
             }
             guard let user = components.user, !user.isEmpty else {
-                throw NSError.newError("用户不存在")
+                throw NSError.newError(Localized.userNotExist)
             }
             guard let host = components.host, !host.isEmpty else {
-                throw NSError.newError("服务器域名或地址不存在")
+                throw NSError.newError(Localized.serverDomainNotExist)
             }
             guard let port = components.port, (1...65535).contains(port) else {
-                throw NSError.newError("服务器的端口号不合法")
+                throw NSError.newError(Localized.portNumberInvalid)
             }
             let mapping = (components.queryItems ?? []).reduce(into: [String: String](), { result, item in
                 result[item.name] = item.value
@@ -38,7 +38,7 @@ extension MGConfiguration {
                 if let value = MGConfiguration.Transport(rawValue: value) {
                     network = value
                 } else {
-                    throw NSError.newError("未知的传输方式")
+                    throw NSError.newError(Localized.unknownTransport)
                 }
             } else {
                 throw NSError.newError("传输方式不能为空")

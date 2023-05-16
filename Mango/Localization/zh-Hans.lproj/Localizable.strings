@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  Mango
+
+  Created by Faraz on 5/14/23.
+  
+*/
+
+"setup" = "设置";
+"dash_board" = "仪表盘";
+"configuration_management" = "配置管理";
+"protocol_parse_faild" = "协议链接解析失败";
+"not_supported" = "暂不支持";
+"protocol_analysis" = "协议解析";
+"config_not_exist" = "配置文件不存在";
+"config_parse_faild" = "配置文件解析失败";
+"user_not_exist" = "用户不存在";
+"server_domain_not_exist" = "服务器域名或地址不存在";
+"port_number_invalid" = "服务器的端口号不合法";
+"unknown_transport" = "未知的传输方式";
+
+//Home
+"state" = "状态";
+"current_config" = "当前配置";
+"dashboard" = "仪表盘";
+"Install" = "安装";
+"vpn_not_installed" = "未安装VPN配置";
+"connect" = "连接";
+"disconnect" = "断开";
+"unknown" = "未知";
+"unavailable" = "不可用";
+"not_connected" = "未连接";
+"connecting" = "正在连接";
+"connected" = "已连接";
+"reconnecting" = "正在重新连接";
+"disconnecting" = "正在断开连接";
+"connection_duration" = "连接时长";
+"name" = "名称";
+"type" = "类型";
+"recently_updated" = "最近更新";
+"no_current_config" = "无当前配置";
+"none" = "无";
+"not_selected" = "未选择";

@@ -11,17 +11,17 @@ struct MGContentView: View {
         TabView {
             MGHomeView(current: $current)
                 .tabItem {
-                    Text("仪表盘")
+                    Text(Localized.dashBoard)
                     Image(systemName: "text.and.command.macwindow")
                 }
             MGConfigurationListView(current: $current)
                 .tabItem {
-                    Text("配置管理")
+                    Text(Localized.configurationManagement)
                     Image(systemName: "doc")
                 }
             MGSettingsView()
                 .tabItem {
-                    Text("设置")
+                    Text(Localized.setup)
                     Image(systemName: "gearshape")
                 }
         }

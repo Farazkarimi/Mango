@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  Mango
+
+  Created by Faraz on 5/14/23.
+  
+*/
+
+"dash_board" = "Dash board";
+"configuration_management" = "Configuration Management";
+"setup" = "Setup";
+"protocol_parse_faild" = "Protocol link parsing failed";
+"not_supported"= "Not supported yet";
+"protocol_analysis" = "protocol analysis";
+"config_not_exist" = "Configuration file does not exist";
+"config_parse_faild" = "Configuration file parsing failed";
+"user_not_exist" = "User does not exist";
+"server_domain_not_exist" = "The server domain name or address does not exist";
+"port_number_invalid" = "The port number of the server is invalid";
+"unknown_transport" = "Unknown transport";
+
+//Home
+"state" = "state";
+"current_config" = "Current configuration";
+"dashboard" = "Dashboard";
+"Install" = "Install";
+"vpn_not_installed" = "VPN configuration not installed";
+"connect" = "connect";
+"disconnect" = "disconnect";
+"unknown" = "unknown";
+"unavailable" = "unavailable";
+"not_connected" = "not connected";
+"connecting" = "connecting";
+"connected" = "connected";
+"reconnecting" = "reconnecting";
+"disconnecting" = "disconnecting";
+"connection_duration" = "Connection Duration";
+"name" = "name";
+"type" = "type";
+"recently_updated" = "Recently updated";
+"no_current_config" = "No current configuration";
+"none" = "none";
+"not_selected" = "not selected";
+
